@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - "27016:27017"
+  app:
+    build: .
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/ruralproducts
+    command: yarn dev:server
+    restart: always
+    ports:
+      - "3002:3002"
+    volumes:
+      - .:/usr/app
