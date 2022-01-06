@@ -1,1 +1,1 @@
-# API made in Node.js using TypeScript for AgroApp application
+# Node.js API made in TypeScript running in a container in Docker
